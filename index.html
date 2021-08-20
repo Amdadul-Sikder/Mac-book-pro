@@ -26,26 +26,26 @@
                     <div class="col-lg-6">
                         <div class="mac-details">
                             <h2>Customize your Blue 24-inch iMac with Apple M1 chip.</h2>
-                            <p>Apple M1 chip with 8-core CPU with 4 performance cores and 4 efficiency cores, 7-core
-                                GPU, and 16-core Neural Engine 8GB unified memory 256GB SSD storage Two Thunderbolt /
-                                USB 4 ports Magic Mouse Magic Keyboard -US English </p>
+                            <p>Apple M1 chip with 8-core CPU with 4 performance cores and 4 efficiency cores, 7-coreGPU,
+                                and 16-core Neural Engine 8GB unified memory 256GB SSD storage TwoThunderbolt /USB 4
+                                ports Magic Mouse Magic Keyboard -US English </p>
                         </div>
                         <div class="specification my-4">
                             <div>
                                 <h5>Memory</h5>
-                                <button>8GB unified memory</button>
-                                <button>16GB unified memory</button>
+                                <button id="first-memory">8GB unified memory</button>
+                                <button id="second-memory">16GB unified memory</button>
                             </div>
                             <div class="my-3">
                                 <h5>Storage</h5>
-                                <button>256GB SSD storage</button>
-                                <button>512GB SSD storage</button>
-                                <button>1TB SSD storage</button>
+                                <button id="first-storage">256GB SSD storage</button>
+                                <button id="second-storage">512GB SSD storage</button>
+                                <button id="third-storage">1TB SSD storage</button>
                             </div class="my-3">
                             <div>
                                 <h5>Choose your delivery option</h5>
-                                <button>Friday, Aug 25 FREE Prime Delivery</button>
-                                <button> Friday, Aug 21 Delivery charge $20</button>
+                                <button id="free">Friday, Aug 25 FREE Prime Delivery</button>
+                                <button id="pay"> Friday, Aug 21 Delivery charge $20</button>
                             </div>
                         </div>
                         <div class="row">
@@ -55,24 +55,24 @@
                                         <tbody>
                                             <tr>
                                                 <td>Best Price</td>
-                                                <td>$1299</td>
+                                                <td>$<span id="price">1299</span></td>
                                             </tr>
                                             <tr>
                                                 <td>Extra Memory Cost</td>
-                                                <td>0$</td>
+                                                <td>$<span id="memory-cost">0</span></td>
                                             </tr>
                                             <tr>
                                                 <td>Extra Storage</td>
-                                                <td>0$</td>
+                                                <td>$<span id="storage-cost">0</span></td>
                                             </tr>
                                             <tr>
                                                 <td>Delivery charge</td>
-                                                <td>0$</td>
+                                                <td>$<span id="delivery-cost">0</span></td>
                                             </tr>
                                             </tr>
                                             <tr>
                                                 <td>Total Price</td>
-                                                <td>$1299</td>
+                                                <td>$<span id="total-price">1299</span></td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -82,8 +82,8 @@
                         </div>
                         <div class="promo-area">
                             <p>Add Promo code</p>
-                            <input type="text">
-                            <button>Apply</button>
+                            <input id="promo-input" type="text">
+                            <button id="promo-btn">Apply</button>
                         </div>
                     </div>
                 </div>
@@ -93,7 +93,7 @@
     </main>
     <hr>
     <footer class="text-center">
-        <h2>Total: $1299</h2>
+        <h2>Total: $<span id="grand-total">1299</span></h2>
     </footer>
 
     <!-- bootstrap -->
