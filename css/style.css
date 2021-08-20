@@ -1,0 +1,18 @@
+.specification button{
+    padding: 3px 15px;
+    border-radius: 5px;
+}
+.specification button:hover{
+    background-color: #5200c6;
+    color: #fff;
+    transition: .3s;
+}
+.promo-area button{
+    background-color: #dc3545;
+    color: #fff;
+    padding: 2px 15px;
+    border-radius: 5px;
+}
+td{
+    font-weight: 600;
+}
