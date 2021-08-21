@@ -21,7 +21,7 @@ firstMemory.addEventListener("click", function () {
     updateTotalPrice();
 })
 secondMemory.addEventListener("click", function () {
-    memoryCost.innerText = 20;
+    memoryCost.innerText = 180;
     updateTotalPrice();
 })
 firstStorage.addEventListener("click", function () {
@@ -29,11 +29,11 @@ firstStorage.addEventListener("click", function () {
     updateTotalPrice();
 })
 secondStorage.addEventListener("click", function () {
-    storageCost.innerText = 30;
+    storageCost.innerText = 100;
     updateTotalPrice();
 })
 thirdStorage.addEventListener("click", function () {
-    storageCost.innerText = 40;
+    storageCost.innerText = 180;
     updateTotalPrice();
 })
 freeDelivery.addEventListener("click", function () {
@@ -41,11 +41,16 @@ freeDelivery.addEventListener("click", function () {
     updateTotalPrice();
 })
 payDelivery.addEventListener("click", function () {
-    deliveryCost.innerText = 25;
+    deliveryCost.innerText = 20;
     updateTotalPrice();
 })
 
-// update total price
+promoBtn.addEventListener("click", function () {
+    discount();
+    promoInput.value = "";
+})
+
+// total price function
 
 function updateTotalPrice() {
     const productPrice = Number(price.innerText);
@@ -56,3 +61,26 @@ function updateTotalPrice() {
     totalPrice.innerText = totalProductPrice;
     grandTotal.innerText = totalProductPrice;
 }
+
+// promo code function
+
+function discount() {
+    const inputAmount = promoInput.value;
+    const totalPriceAmount = Number(totalPrice.innerText);
+    let grandTotalAmount = Number(grandTotal.innerText);
+    const promoText = "stevekaku";
+
+    if (inputAmount == promoText) {
+        grandTotalAmount = totalPriceAmount - (totalPriceAmount * 20 / 100);
+        grandTotal.innerText = grandTotalAmount;
+    }
+    else {
+        console.log("discount not available");
+    }
+}
+
+
+
+
+
+
